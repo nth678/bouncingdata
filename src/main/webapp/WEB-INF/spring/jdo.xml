@@ -1,0 +1,59 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+  <context:annotation-config />
+  
+  <!-- PMF Bean -->
+  <bean id="pmf" class="org.springframework.orm.jdo.LocalPersistenceManagerFactoryBean">
+    <property name="configLocation" value="classpath:datanucleus.properties">
+    </property>
+  </bean>
+
+  <!-- Transaction Manager for PMF -->
+  <!-- <bean id="jdoTransactionManager" class="org.springframework.orm.jdo.JdoTransactionManager">
+    <property name="persistenceManagerFactory">
+      <ref local="pmf" />
+    </property>
+  </bean> -->
+
+  <!-- Typical DAO -->
+  <bean id="dataStorage" class="com.bouncingdata.plfdemo.datastore.JdoDataStorage">
+    <property name="persistenceManagerFactory">
+      <ref local="pmf" />
+    </property>
+  </bean>
+
+  <!-- Typical Business Service --> 
+  <bean id="datastoreService" class="com.bouncingdata.plfdemo.service.DatastoreServiceImpl">
+  </bean>
+  
+  <bean id="dataInitializingService" class="com.bouncingdata.plfdemo.service.DataInitializingService"
+    init-method="init" >
+    <property name="dataStorage" ref="dataStorage"></property>
+  </bean>
+
+  <!-- Transaction Interceptor for Business Services -->
+  <!-- <bean id="transactionInterceptor"
+    class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="transactionManager">
+      <ref local="jdoTransactionManager" />
+    </property>
+    <property name="target">
+      <ref local="datastoreService" />
+    </property>
+    <property name="transactionAttributes">
+      <props>
+        <prop key="store*">PROPAGATION_REQUIRED</prop>
+        <prop key="delete*">PROPAGATION_REQUIRED</prop>
+        <prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+      </props>
+    </property>
+  </bean> -->
+</beans>

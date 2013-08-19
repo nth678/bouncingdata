@@ -1,0 +1,171 @@
+/** Browser CSS */
+.browser-container {
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  display: block;
+}
+
+.browser-container #browser-tabs {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 244px;
+  padding: 2px;
+  border: 0 none;
+}
+
+.browser-container #browser-tabs .ui-tabs-panel {
+  position: absolute;
+  top: 32px;
+  bottom: 0px;  
+  left: 5px;
+  right: 5px;
+  padding: 7px 5px 8px 5px;
+  overflow-y: hidden;
+}
+
+.browser-container #browser-tabs .ui-tabs-panel:hover {
+  /*overflow-y: auto;*/ 
+}
+
+.browser-container #browser-tabs #browser-mystuff .show-all {
+  float: right;
+}
+
+.browser-container #browser-tabs .browser-tab-content {
+  position: absolute;
+  bottom: 20px;  
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow-y: hidden; 
+}
+
+.browser-container #browser-tabs .browser-tab-content:hover {
+  overflow-y: auto; 
+}
+
+.browser-container #browser-tabs #browser-mystuff .browser-buttons {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  font-size: .85em;
+}
+
+
+.browser-container #browser-tabs #browser-mystuff .show-all a, .browser-container #browser-tabs .browser-buttons a {
+  color: #0084B4;
+  text-decoration: none;
+}
+
+.browser-container #browser-tabs #browser-mystuff .show-all a:hover {
+  text-decoration: underline;
+}
+
+.browser-container .browser-separator {
+  border-bottom: 1px solid #FFFFFF;
+  border-top: 1px solid #DDDDDD;
+  height: 0;
+  margin: 10px 0;
+  z-index: -99;
+}
+
+.browser-container h4 {
+  margin: 5px 0;
+  padding: 5px 0 5px 5px;
+  background-color: #DDDDDD;
+  cursor: pointer;
+}
+
+/* Browser item styles */
+.browser-item {
+  padding: 6px;  
+}
+
+.browser-item .browser-item-header {
+  cursor: pointer;
+  padding: 0;
+}
+
+.browser-item:hover {
+  background: none repeat scroll 0 0 #F6F6F6;
+}
+
+.browser-item .browser-item-detail {
+  padding: 5px;
+  background: none repeat scroll 0 0 #F6F6F6;
+}
+
+.browser-item-header a, .browser-item-header a:visited, .browser-item-header a:active, .browser-item-header a:link {
+  text-decoration: none;  
+  outline: none; 
+}
+
+.browser-item .browser-item-header a:hover, .browser-item .browser-item-footer a:hover, .browser-item .datastore-item-detail .datastore-item-datasets a:hover {
+  text-decoration: underline;
+}
+
+.browser-item .browser-item-footer {
+  font-size: 0.75em;
+  color: #999999;
+  display: block;
+  margin-top: 5px;
+}
+
+.browser-item .browser-item-footer a {
+  margin: 0 6px 0 0;  
+  color: #999999;
+  text-decoration: none;
+}
+
+.browser-item .datastore-item-detail .datastore-item-datasets a {
+  margin: 0 6px 0 0;  
+  color: #0084B4;
+  text-decoration: none;
+}
+
+.browser-item:hover .browser-item-footer a, .browser-item:hover .browser-item-footer .browser-item-action {
+  opacity: 1;
+  color: #0084B4;
+}
+
+.browser-item-footer a, .browser-item-footer .browser-item-action {
+  opacity: 1;
+}
+
+.browser-item .datastore-item-dataset .datastore-item-dataset-info {
+  padding-left: 4px;
+  word-wrap: break-word;
+}
+
+#workbench-browser .search-container #search-form {
+  position: relative;
+  border: 1px solid #CCC;
+  height: 25px;
+  margin: 6px;
+}
+
+#workbench-browser .search-container #search-form input.search-input {
+  height: 22px;
+  padding-left: 5px;
+  width: 150px;
+  font-size: 12px;
+  margin: 0;
+  border: 0 none;
+}
+
+#workbench-browser .search-container #search-form .search-criteria {
+  font-size: 0.85em;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  color: #333;
+}
+
+.browser-item .browser-item-header .source-scraper {
+  font-size: 0.8em; 
+  color: #888:
+}

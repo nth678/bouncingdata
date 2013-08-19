@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+<!DOCTYPE orm PUBLIC 
+    "-//Sun Microsystems, Inc.//DTD Java Data Objects Metadata 2.0//EN" 
+    "http://java.sun.com/dtd/orm_2_0.dtd">
+<orm>
+  <package name="com.bouncingdata.plfdemo.datastore.pojo.model">
+    <class name="Dataset" identity-type="datastore" table="datasets">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true" >
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="name">
+        <column name="name" jdbc-type="VARCHAR" length="100" />
+      </field>
+      <field name="description">
+        <column name="description" jdbc-type="LONGVARCHAR" />
+      </field>
+      <field name="schema">
+        <column name="schema" jdbc-type="LONGVARCHAR" />
+      </field>
+      <field name="guid">
+        <column name="guid" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="user">
+        <column name="user" jdbc-type="INTEGER" />
+      </field>
+    
+      <field name="createAt">
+        <column name="create_at" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="lastUpdate">
+        <column name="last_update" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="rowCount">
+        <column name="row_count" jdbc-type="INTEGER" />
+      </field>
+      <!--field name="analysis">
+        <column name="analysis" jdbc-type="INTEGER" />
+      </field-->
+      <field name="scraper">
+        <column name="scraper" jdbc-type="INTEGER" />
+      </field>
+      <field name="isActive">
+        <column name="is_active" jdbc-type="BIT" />
+      </field>
+      <field name="isPublic">
+        <column name="is_public" jdbc-type="BIT" />
+      </field>
+      
+      <field name="score">
+        <column name="score" jdbc-type="INTEGER" />
+      </field>
+    </class>
+        
+    <class name="User" identity-type="datastore" table="spring_users">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="username">
+        <column name="username" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="firstName">
+        <column name="first_name" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="lastName">
+        <column name="last_name" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="email">
+        <column name="email" jdbc-type="VARCHAR" length="100" />
+      </field>
+      <field name="password">
+        <column name="password" jdbc-type="VARCHAR" length="100" />
+      </field>
+      <field name="groupId">
+        <column name="group_id" jdbc-type="INTEGER" />
+      </field>
+      <field name="joinedDate">
+        <column name="joined_date" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="lastLogin">
+        <column name="last_login" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="enabled">
+        <column name="enabled" jdbc-type="BIT" />
+      </field>
+      
+      <field name="activeCode">
+        <column name="active_code" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="expiryDate">
+        <column name="expiry_date" jdbc-type="VARCHAR" length="100" />
+      </field>
+
+    </class>
+    
+    <class name="Visualization" identity-type="datastore" table="visualizations">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="name">
+        <column name="name" jdbc-type="VARCHAR" length="100" />
+      </field>
+      <field name="description">
+        <column name="description" jdbc-type="LONGVARCHAR" />
+      </field>
+      <field name="guid">
+        <column name="guid" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="type">
+        <column name="type" jdbc-type="VARCHAR" length="20" />
+      </field>
+      <field name="analysis">
+        <column name="analysis" jdbc-type="INTEGER" />
+      </field>
+      <field name="user">
+        <column name="user" jdbc-type="INTEGER" />
+      </field>
+      <field name="isActive">
+        <column name="is_active" jdbc-type="BIT" />
+      </field>
+      <!--field name="status">
+        <column name="status" jdbc-type="VARCHAR" length="40" />
+      </field-->
+    </class>
+    
+    <class name="ExecutionLog" identity-type="datastore" table="execution_logs">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="executionId">
+        <column name="name" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="appId">
+        <column name="app_id" jdbc-type="INTEGER" />
+      </field>
+      <field name="startedTime">
+        <column name="started_time" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="endedTime">
+        <column name="ended_time" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="persistedRowCount">
+        <column name="persisted_row_count" jdbc-type="INTEGER" />
+      </field>
+      <field name="visualizationCount">
+        <column name="visualization_count" jdbc-type="INTEGER" />
+      </field>
+      <field name="output">
+        <column name="output" jdbc-type="LONGVARCHAR" />
+      </field>
+    </class>
+    
+    <class name="Group" identity-type="datastore" table="spring_groups">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="name">
+        <column name="group_name" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="createAt">
+        <column name="create_at" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="lastUpdate">
+        <column name="last_update" jdbc-type="TIMESTAMP" />
+      </field>
+    </class>
+    
+    <class name="GroupAuthority" identity-type="datastore" table="spring_group_authorities">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="groupId">
+        <column name="group_id" jdbc-type="INTEGER" />
+      </field>
+      <field name="authority">
+        <column name="authority" jdbc-type="VARCHAR" length="50" />
+      </field>
+    </class>
+    
+    <class name="Membership" identity-type="datastore" table="spring_memberships">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="groupId">
+        <column name="group_id" jdbc-type="INTEGER" />
+      </field>
+      <field name="userId">
+        <column name="user_id" jdbc-type="INTEGER" />
+      </field>
+    </class>
+    
+    <class name="BcDataScript" identity-type="datastore">
+      <inheritance strategy="subclass-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="published">
+        <column name="published" jdbc-type="BIT" />
+      </field>
+      <field name="publicCode">
+        <column name="public_code" jdbc-type="BIT" />
+      </field>
+      <field name="name">
+        <column name="name" jdbc-type="VARCHAR" length="100" />
+      </field>
+      <field name="description">
+        <column name="description" jdbc-type="LONGVARCHAR" />
+      </field>
+      <field name="language">
+        <column name="language" jdbc-type="VARCHAR" length="20" />
+      </field>
+      <field name="guid">
+        <column name="guid" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="user">
+        <column name="user" jdbc-type="INTEGER" />
+      </field>
+      <field name="createAt">
+        <column name="create_at" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="lastUpdate">
+        <column name="last_update" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="lineCount">
+        <column name="line_count" jdbc-type="INTEGER" />
+      </field>
+      <field name="isExecuted">
+        <column name="is_executed" jdbc-type="BIT" />
+      </field>
+    </class>
+    
+    <class name="Analysis" identity-type="datastore" table="analyses">
+      <inheritance strategy="new-table" />
+      <field name="status">
+        <column name="status" jdbc-type="LONGVARCHAR" />
+      </field>
+      <field name="score">
+        <column name="score" jdbc-type="INTEGER" />
+      </field>
+    </class>
+    
+    <class name="Scraper" identity-type="datastore" table="scrapers">
+      <inheritance strategy="new-table" />
+    </class>
+    
+    <class name="Comment" identity-type="datastore" table="comments">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="user">
+        <column name="user" jdbc-type="INTEGER" />
+      </field>
+      <field name="analysis">
+        <column name="analysis" jdbc-type="INTEGER" />
+      </field>
+      <field name="dataset">
+        <column name="dataset" jdbc-type="INTEGER" />
+      </field>
+      <field name="order">
+        <column name="order" jdbc-type="INTEGER" />
+      </field>
+      <field name="title">
+        <column name="title" jdbc-type="VARCHAR" length="100" />
+      </field>
+      <field name="message">
+        <column name="message" jdbc-type="LONGVARCHAR" />
+      </field>
+      <field name="createAt">
+        <column name="create_at" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="lastUpdate">
+        <column name="last_update" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="upVote">
+        <column name="up_vote" jdbc-type="INTEGER" />
+      </field>
+      <field name="downVote">
+        <column name="down_vote" jdbc-type="INTEGER" />
+      </field>
+      <field name="parentId">
+        <column name="parent_id" jdbc-type="INTEGER" />
+      </field>
+      <field name="lastUpdateBy">
+        <column name="last_update_by" jdbc-type="INTEGER" />
+      </field>
+      <field name="removeBy">
+        <column name="remove_by" jdbc-type="INTEGER" />
+      </field>
+      <field name="accepted">
+        <column name="accepted" jdbc-type="BIT" />
+      </field>
+    </class>
+    <class name="AnalysisVote" identity-type="datastore" table="analysis_votes">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="user">
+        <column name="user" jdbc-type="INTEGER" />
+      </field>
+      <field name="analysis">
+        <column name="analysis" jdbc-type="INTEGER" />
+      </field>
+      <field name="vote">
+        <column name="vote" jdbc-type="INTEGER" />
+      </field>
+      <field name="voteAt">
+        <column name="vote_at" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="isActive">
+        <column name="is_active" jdbc-type="BIT" />
+      </field>
+    </class>
+    
+    <class name="DatasetVote" identity-type="datastore" table="dataset_votes">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="user">
+        <column name="user" jdbc-type="INTEGER" />
+      </field>
+      <field name="dataset">
+        <column name="dataset" jdbc-type="INTEGER" />
+      </field>
+      <field name="vote">
+        <column name="vote" jdbc-type="INTEGER" />
+      </field>
+      <field name="voteAt">
+        <column name="vote_at" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="isActive">
+        <column name="is_active" jdbc-type="BIT" />
+      </field>
+    </class>
+    
+    <class name="CommentVote" identity-type="datastore" table="comment_votes">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="user">
+        <column name="user" jdbc-type="INTEGER" />
+      </field>
+      <field name="comment">
+        <column name="comment" jdbc-type="INTEGER" />
+      </field>
+      <field name="vote">
+        <column name="vote" jdbc-type="INTEGER" />
+      </field>
+      <field name="voteAt">
+        <column name="vote_at" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="isActive">
+        <column name="is_active" jdbc-type="BIT" />
+      </field>
+    </class>
+    <class name="Activity" identity-type="datastore" table="activities">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="user">
+        <column name="user" jdbc-type="INTEGER" />
+      </field>
+      <field name="action">
+        <column name="action" jdbc-type="VARCHAR" length="40" />
+      </field>
+      <field name="objectId">
+        <column name="object_id" jdbc-type="INTEGER" />
+      </field>
+      <field name="time">
+        <column name="time" jdbc-type="TIMESTAMP" />
+      </field>
+      <field name="isPublic">
+        <column name="is_public" jdbc-type="BIT" />
+      </field>
+      <field name="message">
+        <column name="message" jdbc-type="VARCHAR" length="1000" />
+      </field>
+    </class>
+    <class name="Tag" identity-type="datastore" table="tags">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" key-cache-size="1"/>
+      </field>
+      <field name="tag">
+        <column name="tag" jdbc-type="VARCHAR" length="100" />
+      </field>
+      <field name="creator">
+        <column name="creator" jdbc-type="INTEGER" />
+      </field>
+      <field name="popularity">
+        <column name="popularity" jdbc-type="INTEGER" />
+      </field>
+      <field name="createAt">
+        <column name="create_at" jdbc-type="TIMESTAMP" />
+      </field>
+    </class>
+    <class name="Following" identity-type="datastore" table="followings">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="user">
+        <column name="user" jdbc-type="INTEGER" />
+      </field>
+      <field name="follower">
+        <column name="follower" jdbc-type="INTEGER" />
+      </field>    
+      <field name="followFrom">
+        <column name="follow_from" jdbc-type="TIMESTAMP" />
+      </field>
+    </class>
+    <class name="AnalysisDataset" identity-type="datastore" table="analysis_dataset">
+      <inheritance strategy="new-table" />
+      <field name="id" primary-key="true">
+        <column name="id" jdbc-type="INTEGER" />
+      </field>
+      <field name="analysis">
+        <column name="analysis" jdbc-type="INTEGER" />
+      </field>
+      <field name="dataset">
+        <column name="dataset" jdbc-type="INTEGER" />
+      </field>    
+      <field name="isActive">
+        <column name="is_active" jdbc-type="BIT" />
+      </field>
+    </class>
+  </package>
+</orm>

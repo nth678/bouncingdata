@@ -1,0 +1,399 @@
+.editor-container {
+  position: relative;  
+}
+
+.editor-container .code-editor-wrapper {
+  height: 400px;
+}
+
+.editor-container .code-editor-wrapper>div {
+  height: 378px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+}
+
+.editor-container .code-editor-wrapper {
+  border: 1px solid #D3D3D3;
+  margin: 1em 0 0 0;
+}
+
+.editor-container .code-editor {
+  width: 100%;
+  font-size: 13px;
+  resize: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height: 378px;
+}
+
+.editor-container #code-hidden {
+  display: none !important;
+}
+
+#main-content .top-bar {
+  margin-top: 10px;
+}
+
+.editor-container .clear-bar {
+  margin: 10px 0;
+  background-color: #DDD;
+  height: 1px;
+}
+
+.editor-container .top-bar .left-buttons {
+  float: left;
+}
+
+.editor-container .top-bar .editor-progress {
+  width: 218px;
+  margin: 0 auto;
+  border: 1px solid #DDD;
+  cursor: pointer;
+  height: 25px;
+}
+
+.editor-container .top-bar .progress .progress-step {
+  background-color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 5px;
+  width: 61px;
+  height: 15px;
+  margin: 0;
+  float: left;
+  text-align: center;  
+}
+
+.editor-container .top-bar .progress .progress-step:first-child {
+  border-right: 1px solid #DDD;
+}
+
+.editor-container .top-bar .progress .progress-step:last-child {
+  border-left: 1px solid #DDD;
+}
+
+.editor-container .top-bar .progress .progress-current {
+  background-color: #4D90FE;
+  color: #FFFFFF;
+}
+
+.editor-container .top-bar .editor-nav-panel {
+  float: right;
+}
+
+.editor-container .info-area {
+  position: relative;  
+}
+
+.editor-container .info-area img.author-avatar {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  float: left;
+}
+
+.editor-container .info-area p {
+  margin: 2px 0;
+}
+
+.editor-container .info-area .title {
+  margin: 5px 0;
+}
+
+.editor-container .info-area  .author {
+  margin-top: 10px;
+}
+
+.editor-container .info-area .author .author-avatar {
+  border: 1px solid #EEEEEE;
+  display: block;
+  float: left;
+  height: 40px;
+  margin-right: 5px;
+  width: 40px;
+}
+
+.editor-container .info-area .editor-status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+}
+
+.editor-container .editor-area {
+  margin-top: 10px;
+}
+
+
+/* The console container element */
+.editor-container .execution-logs .console {
+  position: relative;
+  height: 200px;
+  background-color: #CCC;
+  font-size: .9em;
+  border: 1px solid #D3D3D3;
+}
+
+.editor-container .execution-logs .console-actions {
+  height: 30px;
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+
+.editor-container .execution-logs .console-actions input.ui-button {
+  float: right;
+  border-color: #BBB;
+}
+
+/* The inner console element. */
+.jqconsole {
+  padding: 10px;
+}
+
+/* The cursor. */
+.jqconsole-cursor {
+  background-color: gray;
+}
+
+/* The cursor color when the console looses focus. */
+.jqconsole-blurred .jqconsole-cursor {
+  background-color: #666;
+}
+
+/* The current prompt text color */
+.jqconsole-prompt {
+  color: #0d0;
+}
+
+/* The command history */
+.jqconsole-old-prompt {
+  color: #0b0;
+  font-weight: normal;
+}
+
+/* The text color when in input mode. */
+.jqconsole-input {
+  color: #dd0;
+}
+
+/* Previously entered input. */
+.jqconsole-old-input {
+  color: #bb0;
+  font-weight: normal;
+}
+
+/* The text color of the output. */
+.jqconsole-header, .jqconsole-output {
+  color: #000000;
+}
+
+
+.editor-size-area .size-tabs {
+  clear: both;
+  border: 0 none;
+}
+
+.editor-size-area .size-tabs > ul {
+  float: right;
+  padding: 1px;
+}
+
+
+/** Visualization styles **/
+
+.editor-size-area .size-viz, .editor-size-area .size-data, .editor-size-area .size-code {
+  overflow-y: auto;  
+  padding: 10px 0 0 0;
+}
+
+.editor-size-area .size-viz .viz-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.editor-size-area #dashboard-wrapper {
+  width: 100%; 
+  position: absolute; 
+  height: 14000px;
+  width: 602px;
+}
+
+.editor-size-area .size-viz .dashboard-ruler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 450px;
+  width: 602px;
+  border: 0 none;
+}
+
+.editor-size-area .size-viz .dashboard-ruler .snap-line {
+  position: absolute;
+  opacity: 0;  
+  z-index: 1000;
+}
+
+.editor-size-area .size-viz .dashboard-ruler .snap-line-left, .result-tab-viz .dashboard-ruler .snap-line-right {
+  border: 0 none;
+  width: 1px;
+  background-color: #00FF00;
+}
+
+.editor-size-area .size-viz .dashboard-ruler .snap-line-top, .result-tab-viz .dashboard-ruler .snap-line-bottom {
+  border: 0 none;
+  height: 1px;
+  background-color: #00FF00;
+}
+
+.editor-size-area .size-viz .dashboard-ruler .ruler {
+  position: absolute;
+  z-index: 1000;
+}
+
+.editor-size-area .size-viz .dashboard-ruler .dashboard-ruler-top {
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  background: url('../../images/ruler-top.gif') repeat-x scroll left top transparent;
+}
+
+.editor-size-area .size-viz .dashboard-ruler .dashboard-ruler-left {
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: url('../../images/ruler-left.gif') repeat-y scroll left top transparent;
+}
+
+.editor-size-area .size-viz .dashboard-ruler .dashboard-ruler-right {
+  right: 0;
+  top: 0; 
+  height: 100%;
+  width: 10px;
+  background: url('../../images/ruler-left.gif') repeat-y scroll right top transparent;
+}
+
+.editor-size-area .size-viz .dashboard-ruler .dashboard-ruler-bottom {
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  background: url('../../images/ruler-top.gif') repeat-x scroll left bottom transparent;
+}
+
+.editor-size-area .size-viz #viz-dashboard {
+  border: 0 none;
+  width: 600px;
+  background: url('../../images/grid.gif') repeat scroll left top transparent;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.editor-size-area .size-viz #viz-dashboard .viz-container {
+  border: 1px solid #999999;
+  background: none repeat scroll left top #FFFFFF;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+#viz-dashboard .viz-container .ui-resizable-s {
+  height: 10px;
+}
+
+.editor-size-area .size-viz .app-output-actions {
+  margin: 10px 0;
+}
+
+.editor-size-area .size-viz #viz-dashboard .viz-container-hover {
+  /*border: 1px dotted #888888;*/
+  border: 1px dotted #347C17;
+}
+
+.editor-size-area .size-viz #viz-dashboard .viz-container .ui-resizable-handle {
+  opacity: 0;
+}
+
+.editor-size-area .size-viz #viz-dashboard .viz-container-hover .ui-resizable-handle {
+  opacity: 1;
+}
+
+.editor-size-area .size-viz #viz-dashboard .viz-container > iframe {
+  border: 1px dashed #DDDDDD;  
+  overflow: hidden;
+}
+
+.editor-size-area .size-viz #viz-dashboard .viz-container .viz-handle {
+  height: 12px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  background: none repeat scroll left top #C0C0C0;
+}
+
+.editor-size-area .size-viz #viz-dashboard .viz-container .viz-handle-hover {
+  /*background: #BBBBBB no-repeat scroll left top;*/
+  cursor: crosshair;
+}
+
+.visualization-item-frame {
+  border: 1px solid #CCCCCC;
+  width: 100%;
+  height: 400px;
+}
+
+/** Iframe fix for dragging/resizing **/
+body>div.resizable-iframe-fix, body>div.ui-draggable-iframeFix {
+  position: absolute; 
+  opacity: 0.001; 
+  z-index: 1000 !important;
+}
+
+
+/** describe page **/
+
+.editor-describe-container .detail-area {
+  margin-top: 10px;
+}
+
+.editor-describe-container .detail-area .detail-form fieldset {
+  padding: 0;
+  border: 0 none;
+}
+
+.editor-describe-container .detail-area .detail-form label {
+  display: inline-block;
+  margin-top: 10px;
+  margin-botton: 4px;
+  width: 90px;
+}
+
+.editor-describe-container .detail-area .detail-form textarea#description {
+  width: 100%; 
+  height: 250px;
+  border: 1px solid #DDD;
+  resize: vertical;
+}
+
+.editor-describe-container .detail-area .detail-form input#name {
+  border: 1px solid #CCC;
+  padding: 3px;
+}
+
+.editor-describe-container .detail-area .detail-form input#name:focus {
+  border-color: #4D90FE;
+}
+
+.editor-describe-container .detail-area .tag-set {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}

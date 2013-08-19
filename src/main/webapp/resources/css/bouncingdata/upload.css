@@ -1,0 +1,186 @@
+.top-bar {
+  margin-top: 10px;
+}
+
+.clear-bar {
+  margin: 10px 0;
+  background-color: #DDD;
+  height: 1px;
+}
+
+.upload-container .top-bar .left-buttons {
+  float: left;
+}
+
+.upload-container .top-bar .progress {
+  height: 25px;
+  margin: 0 auto;
+  border: 1px solid #DDD;
+  cursor: pointer;
+}
+
+.upload-container .top-bar .progress .progress-step {
+  background-color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  text-align: center;  
+  height: 15px;
+  float: left;
+}
+
+.upload-container .top-bar .upload-progress {
+  width: 215px;
+}
+
+.upload-container .top-bar .upload-progress .progress-step:first-child {
+  border-right: 1px solid #DDD;
+  width: 24px;
+}
+
+.upload-container .top-bar .upload-progress .progress-step:last-child {
+  width: 147px;
+}
+
+.upload-container .top-bar .progress .progress-current {
+  background-color: #4D90FE;
+  color: #FFFFFF;
+}
+
+.upload-container .top-bar .upload-nav-panel, .top-bar .schema-nav-panel {
+  float: right;
+}
+
+.upload-container .top-bar .progress a.progress-step:hover {
+  text-decoration: none;
+}
+
+.upload-container input#file-url {
+  border: 1px solid #CCC;
+  height: 16px;
+  padding: 4px;
+  width: 500px;
+}
+
+.upload-container .file-inner, .upload-container .options-inner {
+  margin: 10px 0;
+}
+
+.upload-container .file-inner label, .upload-container .options-inner label {
+  width: 100px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.upload-container .options-section {
+  margin-top: 20px;
+}
+
+.upload-container .panel-wrapper {
+  position: relative;
+}
+
+.upload-container .panel-wrapper .guideline-wrapper {
+  position: absolute;
+  left: -200px;
+  width: 150px;
+}
+
+.upload-container .panel-wrapper .guideline {
+  border: 2px solid #555;
+  background-color: #DDD;
+  border-radius: 2px;
+  padding: 2px 4px;
+  float: right;
+}
+
+.upload-container table#schema-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.upload-container table#schema-table, .upload-container table#schema-table thead th, .upload-container table#schema-table td {
+  border: 1px solid #DDD;
+}
+
+.upload-container table#schema-table thead th, .upload-container table#schema-table td {
+  padding: 4px;
+}
+
+.upload-container table#schema-table thead th {
+  background-color: #EEE;
+}
+
+.upload-container .schema-panel .reference-form input#web-ref {
+  border: 1px solid #CCC;
+  padding: 3px;
+  width: 500px;
+}
+
+.upload-container div.input-wrapper {
+  border: 1px solid #DDD;
+  line-height: 1.6em;
+  height: 1.6em;
+  padding: 2px;
+  margin-top: 4px;
+}
+
+.upload-container div.input-wrapper input {
+  border: 0 none;
+}
+
+.upload-container .description-panel input#name, .upload-container .description-panel input#source {
+  width: 100%;
+  border: 0 none;
+  padding: 0;
+} 
+
+.upload-container #schema-panel {
+  border: 0 none;
+  padding: 0;
+}
+
+.upload-container #schema-panel .ui-tabs-panel {
+  padding: 20px 0;
+}
+
+.upload-container .description-panel .tag-set {
+  margin-top: 10px;
+}
+
+#schema-table span.column-description, #schema-table span.column-name, #schema-table span.column-type  {
+  border: 1px solid #FFF;
+  padding: 2px;
+  width: 95%;
+  display: inline-block;
+  height: 1.3em;
+  line-height: 1.3em;
+}
+
+#schema-table span.column-description:hover, #schema-table span.column-name:hover, #schema-table span.column-type:hover {
+  border: 1px solid #CCC;
+  cursor: text;
+}
+
+.upload-container input#file-url:focus, #schema-table td input:focus, .upload-container .schema-panel input#web-ref:focus, .upload-container .description-panel #name:focus {
+  border-color: #4D90FE;
+}
+
+.upload-container .schema-panel ul.ui-tabs-nav {
+  float: right;
+}
+
+.upload-container .description-panel label, .upload-container .schema-panel .reference-form label {
+  display: inline-block;
+  width: 90px;
+}
+
+.upload-container #schema-tab-view table#data-preview {
+  margin-top: 10px;
+  width: 100% !important;
+}
+
+.upload-container .description-panel table.mceLayout {
+  margin-top: 4px;
+}

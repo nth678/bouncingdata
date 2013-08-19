@@ -1,0 +1,49 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+  
+  <context:property-placeholder location="classpath:bcdatastore.jdbc.properties"/>
+  
+  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+    p:driverClassName="${bcdatastore.jdbc.driverClassName}"
+    p:url="${bcdatastore.jdbc.url}"
+    p:username="${bcdatastore.jdbc.username}"
+    p:password="${bcdatastore.jdbc.password}" />
+  
+  <!-- bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+    p:driverClassName="${bcdatastore.jdbc.driverClassName}"
+    p:url="jdbc:mysql://ec2-50-19-213-178.compute-1.amazonaws.com:3306/bcdata-test"
+    p:username="bcdata-test"
+    p:password="a" /-->
+  
+  <!-- PMF Bean -->
+  <!-- bean id="pmf" class="org.springframework.orm.jdo.LocalPersistenceManagerFactoryBean"
+    p:configLocation="classpath:datanucleus-test.properties" /-->
+  
+  <bean id="pmf" class="org.springframework.orm.jdo.LocalPersistenceManagerFactoryBean"
+    p:configLocation="classpath:datanucleus.properties" />
+    
+  <!--bean id="pmf" class="org.datanucleus.jdo.JDOPersistenceManagerFactory" destroy-method="close">
+    <property name="connectionFactory" ref="dataSource"/>
+    <property name="nontransactionalRead" value="true"/>
+  </bean-->
+
+  <!-- Typical DAO -->
+  <bean id="jdoDataStorage" class="com.bouncingdata.plfdemo.datastore.JdoDataStorage">
+    <property name="persistenceManagerFactory">
+      <ref local="pmf" />
+    </property>
+  </bean>
+  
+  <!-- bean id="transactionManager" class="org.springframework.orm.jdo.JdoTransactionManager">
+    <property name="persistenceManagerFactory">
+      <ref local="pmf" />
+    </property>
+  </bean-->
+</beans>

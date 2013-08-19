@@ -1,0 +1,230 @@
+#main-content .center-content-main {
+  padding: 0 15px;
+}
+
+#main-content .center-content-side {
+  float: right;
+  width: 260px;
+  padding: 10px;
+}
+
+#main-content .stream-container #stream .event {
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+#main-content.homepage-container .right-content {
+  width: 300px;
+  color: #333333 !important;
+}
+
+.homepage-container .stream-filter {
+  margin-top: 25px;
+}
+
+.homepage-container .stream-filter a:hover {
+  color: #0077CC;
+  text-decoration: none;
+}
+
+.homepage-container .stream-filter a.nav-selected{
+	color: black;
+	text-decoration: underline;
+}
+
+#stream .event .event-avatar-link {
+  float: right;
+  cursor: pointer;
+  height: 41px;
+  width: 41px;
+  display: block;
+}
+
+#stream .event img.avatar {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #DDDDDD;
+  border-radius: 2px;
+}
+
+#stream .event .event-content {
+  float: left;
+  border: 1px solid #E2E2E2;
+  border-radius: 2px;
+  padding: 10px;
+  width: 510px;
+  position: relative;
+}
+
+#stream .event .event-content .title {
+  color: #0077CC;
+  font-size: 13px;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+#stream .event .event-content .info {
+  font-size: 11px;
+  color: #999999;
+  margin: 5px 0;
+}
+
+#stream .event .event-content .info .author a {
+  
+}
+
+
+#stream .event-content:hover {
+  border-color: #DDDDDD;
+}
+
+#stream .event a {
+  text-decoration: none;
+}
+
+#stream .event-content:hover a {
+  color: #003366;
+}
+
+#stream .event .event-content .thumbnail {
+  border: 1px solid #EEEEEE;
+  margin-right: 10px;
+  float: left;
+  border-radius: 2px;
+}
+
+#stream .event .event-content .thumbnail a {
+  display: block;
+}
+
+#stream .event .event-content .thumbnail a img {
+  width: 160px;
+  height: 120px;
+}
+
+#stream .event .event-content .time {
+  float: right;
+  color: #CCCCCC;
+}
+
+#stream .event .event-score.event-score-positive {
+  color: green;
+}
+
+#stream .event .event-score.event-score-negative {
+  color: red;
+}
+
+#stream .event .event-footer {
+  position: absolute;
+  right: 6px;
+  bottom: 5px;
+}
+
+#stream .event .event-score {
+  color: orange;
+}
+
+#stream .stream-footer {
+  padding: 10px;
+}
+
+#stream a.more-feed {
+  text-decoration: none;
+}
+
+
+.side-item-panel .small-thumbnail {
+  float: left;
+  margin-right: 10px;
+}
+
+.side-item-panel .small-thumbnail  a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 76px;
+  height: 76px;
+  border: 1px solid #DDD;  
+}
+
+.side-item-panel .small-thumbnail .thumb-img {
+  width: 76px;
+  height: 76px;
+}
+
+.side-item-panel a.small-avatar-link {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #DDD:
+}
+
+.side-item-panel .small-avatar-link img {
+  width: 30px;
+  height: 30px;
+}
+
+.right-content div.side-list-panel  {
+  padding: 5px;
+  overflow-y: hidden;
+  min-height: 350px;
+  height: 250px;
+  color: #333333;
+  overflow-x: hidden;
+  background-color: transparent !important;
+}
+
+.right-content .side-list-panel .side-item-panel {
+  width: 270px;
+  margin-bottom: 15px;
+}
+
+.right-content .side-list-panel .side-item-panel p {
+  margin: 5px 0;
+}
+
+.side-item-panel .side-item-author {
+  font-size: 11px;
+  color: #999;
+}
+
+.side-list-panel .side-ite-panel .side-item-author {
+  color: #556;
+}
+
+.right-content div.side-list-panel:hover {
+  overflow-y: auto;
+}
+
+.right-content .right-content-section {
+  background-color: #F5F5F5;
+  margin-top: 15px;
+  padding: 10px 0;
+  border-radius: 2px;
+}
+
+.right-content .right-content-section .right-section-title {
+  margin: 0 10px;
+}
+
+.homepage-container .right-content .right-content-section .ui-tabs {
+  border: 0 none !important;
+  background: none repeat scroll 0 0 transparent;
+  padding: 0 0 0 5px;
+}
+
+.homepage-container .right-content .right-section-tabs-wrapper {
+  margin-top: 10px;
+}
+
+.homepage-container .right-content .right-content-section .ui-tabs ul.ui-tabs-nav {
+  border: 0 none;
+  border-bottom: 2px solid #FFFFFF;
+  background: none repeat scroll 0 0 transparent;
+  padding: 0;
+}
+
+
+

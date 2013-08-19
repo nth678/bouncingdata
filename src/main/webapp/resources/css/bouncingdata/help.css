@@ -1,0 +1,64 @@
+.help-page code {
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #3399CC;
+  color: #003366;
+  background-color: #C1E0F0;
+  margin: 1em 0;
+  font-family: monospace;
+  font-size: 15px;
+  white-space: pre;
+  overflow: auto;
+}
+
+.help-page .help-page-nav {
+  margin: 10px 10px 10px 15px;
+  padding-left: 10px;
+  background-color: #E8F2F9;
+}
+
+.help-page .help-content-wrapper {
+  margin: 10px 10px 10px 15px;
+}
+
+.help-page-nav .help-page-nav-item {
+  display: inline-block;
+}
+
+.help-page-nav-item form {
+  display: inline;
+}
+
+.help-page a.help-page-link:active, .help-page a.help-page-link:visited {
+  text-decoration: none;
+  color: #336699; 
+}
+
+.help-page-nav a.help-page-link {
+  padding: 7px 12px;
+  line-height: 16px;
+  border-left: 2px solid #FFFFFF;
+  display: inline-block;
+  color: #336699;  
+  text-decoration: none;
+}
+
+.help-page a.help-page-link.selected-lang {
+  color: #557711;
+}
+
+.help-page var {
+  background-color: #EEEEEE;
+  font-family: monospace;
+  font-style: normal;
+  padding: 2px 5px; 
+}
+
+.help-page dt {
+  background-color: #F4F8FB;
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 1em;
+  padding: 0.3em 1em;
+} 

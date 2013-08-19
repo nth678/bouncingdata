@@ -1,0 +1,406 @@
+.workbench-container#main-content {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  left: 120px;
+  bottom: 10px;
+}
+
+.workbench-container#main-content .workbench-browser {
+  position: fixed;
+  top: 60px;
+  bottom: 20px;
+  width: 248px;
+  right: 10px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #E2E2E2;
+}
+
+.workbench-container#main-content .workbench-ide {
+  margin-right: 280px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  height: 100%;
+  border: 1px solid #E2E2E2;
+  position: relative;
+}
+
+.workbench-ide .workbench-main-tabs {
+  padding: 10px;
+  border: 0 none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+
+.workbench-ide .workbench-toolbar {
+  height: 30px;
+  padding: 10px;
+}
+
+.workbench-toolbar .app-actions {
+  display: inline-block;
+  padding: 2px;
+}
+
+.workbench-main-tabs .workbench-main-tabs-bar li .ui-icon-close { 
+  float: left; 
+  margin: 0.2em 0.2em 0 0; 
+  cursor: pointer; 
+  border: 1px solid transparent;
+}
+
+.workbench-main-tabs .workbench-main-tabs-bar li .ui-icon-close:hover {
+  border-radius: 3px;
+  border: 1px solid #BEBEBE;
+}
+
+.workbench-main-tabs .workbench-main-tabs-bar {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.workbench-main-tabs .workbench-main-tabs-bar li a {
+  outline: none;
+}
+
+.workbench-main-tabs > div.ui-tabs-panel {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 10px;
+  bottom: 0;
+  overflow: auto;
+}
+
+.workbench-main-tabs .workbench-content-container, .workbench-main-tabs .workbench-content-container .workbench-content-layout {
+  height: 100%;
+}
+
+.workbench-flow .app-info {
+  float: left;
+}
+
+.workbench-flow .workbench-flow-nav {
+  float: right;
+  display: none;
+}
+
+.workbench-flow .workbench-nav .flow-nav-item {
+  display: inline-block;
+
+}
+
+.workbench-flow .workbench-flow-content {
+  clear: both;
+  position: relative;
+}
+
+.workbench-flow .workbench-editor, .workbench-flow .workbench-result {
+  position: absolute;
+  width: 100%;
+}
+
+.workbench-flow .workbench-result {
+  left: -14000px;
+}
+
+.workbench-flow .code-editor-wrapper {
+  height: 350px;
+}
+
+.workbench-flow .code-editor-wrapper>div {
+  height: 328px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+}
+
+.workbench-flow .code-editor-wrapper {
+  border: 1px solid #D3D3D3;
+  margin: 1em 0 0 0;
+}
+
+.workbench-flow .code-editor {
+  width: 100%;
+  font-size: 13px;
+  resize: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height: 328px;
+}
+
+.workbench-flow .workbench-editor .execution-logs {
+  position: relative;
+  margin-top: 10px;
+}
+
+.workbench-flow .app-actions {
+  float: right;
+}
+
+.workbench-flow .app-actions .app-execute-button, .workbench-flow .app-actions .app-post-button {
+  background-color: #D14836;
+  background-image: -webkit-linear-gradient(top,#DD4B39,#D14836);
+  background-image: -moz-linear-gradient(top,#DD4B39,#D14836);
+  background-image: -ms-linear-gradient(top,#DD4B39,#D14836);
+  background-image: -o-linear-gradient(top,#DD4B39,#D14836);
+  background-image: linear-gradient(top,#DD4B39,#D14836);
+  font-weight: bold;
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 0;
+  height: 28px;
+}
+
+.workbench-flow .app-actions .app-execute-button:hover, .workbench-flow .app-actions .app-post-button:hover {
+  background-color: #C53727;
+  background-image: -webkit-linear-gradient(top,#DD4B39,#C53727);
+  background-image: -moz-linear-gradient(top,#DD4B39,#C53727);
+  background-image: -ms-linear-gradient(top,#DD4B39,#C53727);
+  background-image: -o-linear-gradient(top,#DD4B39,#C53727);
+  background-image: linear-gradient(top,#DD4B39,#C53727);
+}
+
+.workbench-flow .workbench-result .result-tabs {
+  clear: both;
+  border: 0 none;
+}
+
+.workbench-flow .workbench-result .result-tabs > ul {
+  float: right;
+  padding: 1px;
+}
+
+/** Visualization styles **/
+
+.workbench-flow .workbench-result .result-tab-viz {
+  overflow-y: auto;  
+}
+
+.workbench-flow .workbench-result .result-tab-viz .viz-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.workbench-result .result-tab-viz .dashboard-ruler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 450px;
+  width: 800px;
+  border: 0 none;
+}
+
+.result-tab-viz .dashboard-ruler .snap-line {
+  position: absolute;
+  opacity: 0;  
+  z-index: 1000;
+}
+
+.result-tab-viz .dashboard-ruler .snap-line-left, .result-tab-viz .dashboard-ruler .snap-line-right {
+  border: 0 none;
+  width: 1px;
+  background-color: #00FF00;
+}
+
+.result-tab-viz .dashboard-ruler .snap-line-top, .result-tab-viz .dashboard-ruler .snap-line-bottom {
+  border: 0 none;
+  height: 1px;
+  background-color: #00FF00;
+}
+
+.result-tab-viz .dashboard-ruler .ruler {
+  position: absolute;
+  z-index: 1000;
+}
+
+.result-tab-viz .dashboard-ruler .dashboard-ruler-top {
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  background: url('../../images/ruler-top.gif') repeat-x scroll left top transparent;
+}
+
+.result-tab-viz .dashboard-ruler .dashboard-ruler-left {
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: url('../../images/ruler-left.gif') repeat-y scroll left top transparent;
+}
+
+.result-tab-viz .dashboard-ruler .dashboard-ruler-right {
+  right: 0;
+  top: 0; 
+  height: 100%;
+  width: 10px;
+  background: url('../../images/ruler-left.gif') repeat-y scroll right top transparent;
+}
+
+.result-tab-viz .dashboard-ruler .dashboard-ruler-bottom {
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  background: url('../../images/ruler-top.gif') repeat-x scroll left bottom transparent;
+}
+
+.workbench-result .result-tab-viz .viz-dashboard {
+  min-height: 450px;
+  border: 0 none;
+  width: 800px;
+  background: url('../../images/grid.gif') repeat scroll left top transparent;
+}
+
+.workbench-result .result-tab-viz .viz-dashboard .viz-container {
+  border: 1px solid #999999;
+  background: none repeat scroll left top #FFFFFF;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+.workbench-result .result-tab-viz .app-output-actions {
+  margin: 10px 0;
+}
+
+.workbench-flow .result-tab-viz .viz-dashboard .viz-container-hover {
+  /*border: 1px dotted #888888;*/
+  border: 1px dotted #347C17;
+}
+
+.workbench-flow .result-tab-viz .viz-dashboard .viz-container .ui-resizable-handle {
+  opacity: 0;
+}
+
+.workbench-flow .result-tab-viz .viz-dashboard .viz-container-hover .ui-resizable-handle {
+  opacity: 1;
+}
+
+.workbench-flow .result-tab-viz .viz-dashboard .viz-container > iframe {
+  border: 1px dashed #DDDDDD;  
+  overflow: hidden;
+}
+
+.result-tab-viz .viz-dashboard .viz-container .viz-handle {
+  height: 12px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  background: none repeat scroll left top #C0C0C0;
+}
+
+.result-tab-viz .viz-dashboard .viz-container .viz-handle-hover {
+  /*background: #BBBBBB no-repeat scroll left top;*/
+  cursor: crosshair;
+}
+
+.visualization-item-frame {
+  border: 1px solid #CCCCCC;
+  width: 100%;
+  height: 400px;
+}
+
+/** Iframe fix for dragging/resizing **/
+body>div.resizable-iframe-fix, body>div.ui-draggable-iframeFix {
+  position: absolute; 
+  opacity: 0.001; 
+  z-index: 1000 !important;
+}
+
+/** Dataset view styles **/
+
+.dataset-view-container .dataset-view-info p {
+  margin: 10px 0;
+}
+
+.dataset-view-container .dataset-view-main .dataset-query-editor {
+  border: 1px solid #D3D3D3;
+  margin: 1em 0 0 0;
+}
+
+.workbench-main-tabs .dataset-view-container, .workbench-main-tabs .dataset-view-container .dataset-view-layout {
+  height: 100%;
+}
+
+.dataset-view-main .dataset-query {
+  margin: 30px 0 10px;
+}
+
+.dataset-view-main .dataset-query .dataset-query-actions {
+  margin-top: 5px;
+  float: right;
+}
+
+/** Console styles **/
+
+/* The console container element */
+.workbench-flow .workbench-editor .execution-logs .console {
+  position: relative;
+  height: 200px;
+  background-color: #CCC;
+  font-size: .9em;
+  border: 1px solid #D3D3D3;
+}
+
+.workbench-flow .workbench-editor .execution-logs .console-actions {
+  margin-top: 5px;
+  height: 30px;
+}
+
+.workbench-flow .workbench-editor .execution-logs .console-actions input.ui-button {
+  float: right;
+}
+
+/* The inner console element. */
+.jqconsole {
+  padding: 10px;
+}
+
+/* The cursor. */
+.jqconsole-cursor {
+  background-color: gray;
+}
+
+/* The cursor color when the console looses focus. */
+.jqconsole-blurred .jqconsole-cursor {
+  background-color: #666;
+}
+
+/* The current prompt text color */
+.jqconsole-prompt {
+  color: #0d0;
+}
+
+/* The command history */
+.jqconsole-old-prompt {
+  color: #0b0;
+  font-weight: normal;
+}
+
+/* The text color when in input mode. */
+.jqconsole-input {
+  color: #dd0;
+}
+
+/* Previously entered input. */
+.jqconsole-old-input {
+  color: #bb0;
+  font-weight: normal;
+}
+
+/* The text color of the output. */
+.jqconsole-header, .jqconsole-output {
+  color: #000000;
+}
+

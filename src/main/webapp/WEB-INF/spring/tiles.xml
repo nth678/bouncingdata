@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>  
+  <definition name="stream" extends="based-layout">  
+    <put-attribute name="main-content" value="/WEB-INF/views/stream.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="create" extends="based-layout">  
+    <put-attribute name="main-content" value="/WEB-INF/views/workbench.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="editor" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/editor.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="speditor" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/speditor.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="size" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/size.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="describe" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/describe.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="analysis" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/analysis.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="datapage" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/datapage.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="error" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/error.jsp"></put-attribute>
+  </definition>
+        
+  <definition name="based-layout" template="/WEB-INF/views/layout/bouncingdata/layout.jsp">
+    <put-attribute name="title" value="Bouncing Data"></put-attribute>
+    <put-attribute name="header-content" value="/WEB-INF/views/layout/bouncingdata/header.jsp" />
+    <put-attribute name="navigation" value="/WEB-INF/views/layout/bouncingdata/nav.jsp"></put-attribute>
+    <put-attribute name="footer-content" value="/WEB-INF/views/layout/bouncingdata/footer.jsp" />
+    <put-attribute name="popup-container" value="/WEB-INF/views/popup-container.jsp" />
+  </definition>
+  <!-- Vinhpq: Adding definition -->
+  
+   <definition name="based-layout-no-nav" template="/WEB-INF/views/layout/bouncingdata/layout.jsp">
+    <put-attribute name="title" value="Bouncing Data"></put-attribute>
+    <put-attribute name="header-content" value="/WEB-INF/views/layout/bouncingdata/header.jsp" />
+    <put-attribute name="navigation" value=""></put-attribute>
+    <put-attribute name="footer-content" value="/WEB-INF/views/layout/bouncingdata/footer.jsp" />
+    <put-attribute name="popup-container" value="/WEB-INF/views/popup-container.jsp" />
+  </definition>
+    
+  <definition name="help-python" extends="based-layout-no-nav">
+    <put-attribute name="main-content" value="help-python-content"></put-attribute>
+  </definition>
+  
+  <definition name="learn" extends="based-layout-no-nav">  
+    <put-attribute name="main-content" value="/WEB-INF/views/learn.jsp"></put-attribute>  
+  </definition>
+  
+  <definition name="author" extends="based-layout">  
+    <put-attribute name="main-content" value="/WEB-INF/views/author.jsp"></put-attribute>  
+  </definition>
+  
+  <definition name="tags" extends="based-layout">  
+    <put-attribute name="main-content" value="/WEB-INF/views/tags.jsp"></put-attribute>  
+  </definition>
+  
+  <!-- End -->
+  
+  <definition name="connect" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/connect.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="search" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/search.jsp"></put-attribute>
+  </definition>
+      
+  <definition name="help-python-content" template="/WEB-INF/views/layout/bouncingdata/help-layout.jsp">  
+    <put-attribute name="help-content" value="/WEB-INF/views/help-python.jsp"></put-attribute>  
+  </definition>
+  
+  <definition name="help-r-content" template="/WEB-INF/views/layout/bouncingdata/help-layout.jsp">  
+    <put-attribute name="help-content" value="/WEB-INF/views/help-r.jsp"></put-attribute>    
+  </definition>
+  
+  <definition name="help-r" extends="based-layout-no-nav">
+    <put-attribute name="main-content" value="help-r-content"></put-attribute>
+  </definition>
+  
+  <definition name="upload" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/upload.jsp"></put-attribute>
+  </definition>
+    
+  <definition name="schema" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/schema.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="tag" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/tag.jsp"></put-attribute>
+  </definition>
+  
+  <definition name="filter" extends="based-layout">
+    <put-attribute name="main-content" value="/WEB-INF/views/filter.jsp"></put-attribute>
+  </definition>
+  
+</tiles-definitions>
